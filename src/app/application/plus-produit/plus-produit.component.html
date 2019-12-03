@@ -1,0 +1,11 @@
+<div class="container" style="width : 30vw">
+<form [formGroup]="productForm" (ngSubmit)="onSubmitForm()">
+    <input type="number" id="id" name="id" class="form-control" formControlName="id" >
+     <input type="text" id="libelle" name="libelle" class="form-control" formControlName="libelle" >
+     <input type="submit" class="form-control" [disabled]="productForm.invalid" >
+     <input type="reset" class="form-control" value="Vider">
+     <div *ngIf="idProduct.invalid && idProduct.dirty" class="alert alert-danger">
+ L'identifiant est obligatoire
+ </div>
+</form>
+</div>
